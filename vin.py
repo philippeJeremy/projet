@@ -1,6 +1,4 @@
 import os
-import json
-import pandas as pd
 import scrapy
 import logging
 from scrapy.utils.request import request_fingerprint
@@ -10,20 +8,27 @@ from scrapy.crawler import CrawlerProcess
 class QuotesSpider1(scrapy.Spider):
     name = "spider1"
 
-    file = pd.read_csv('data.csv')
-    file = file["url"]
-    liste_url = [element for element in file]
-    start_urls = liste_url
+    target = ["Fromage", "Poulet", "Boeuf"]
+
+    urls = []
+    
+    for i in target:
+        urls.append(f"https://www.platsnetvins.com/accords-plats-mets-vins.php?plat={i}")
+       
+
+    start_urls = urls 
     
     def parse(self, response):
         print(response)
-        
-        yield {
-                "plat" : response.css('h1.SHRD__sc-10plygc-0.itJBWW::text').get(),
-                "recette" : response.xpath('/html/head/meta[18]').extract(),    
+        keys = response.css('div.col c2_of_3_RA')
+        for key in keys:
+            yield {
+                "vin" : key.css('div.Accord::text').get(),
+                "plat": key.css('//*[@class="card cardresuA"]/div/div[3]/span/text()').get(), 
+                # "url": key.css("a.recipe-card-link::attr(href)").getall() 
                 }
                                  
-filename = "recette.json"
+filename = "vin.json"
 
 if filename in os.listdir():
         os.remove( filename)
