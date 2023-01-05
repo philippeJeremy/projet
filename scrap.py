@@ -23,10 +23,10 @@ class QuotesSpider1(scrapy.Spider):
         urls.append(f"https://www.marmiton.org/recettes/index/categorie/creme/{i}")
         urls.append(f"https://www.marmiton.org/recettes/index/categorie/dessert-glace/{i}")
         urls.append(f"https://www.marmiton.org/recettes/index/categorie/tarte/{i}")
-        
-
-        
-
+        urls.append(f"https://www.marmiton.org/recettes/index/categorie/plat-vegetarien/{i}")
+        urls.append(f"https://www.marmiton.org/recettes/index/categorie/entree-chaude/{i}")
+        urls.append(f"https://www.marmiton.org/recettes/index/categorie/andouilette/{i}")
+        urls.append(f"https://www.marmiton.org/recettes/index/categorie/abats/{i}")
 
     start_urls = urls 
     
