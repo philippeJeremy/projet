@@ -9,35 +9,31 @@ import random
 class QuotesSpider1(scrapy.Spider):
     name = "spider1"
 
-    target = ["Fromages", "Poulet", "Boeuf", "Abats", "Apéritif", "Charcuteries", "Desserts", "Fruits de mer", "Gibiers", "Légumes", "Pâtes", "Poissons", "Salades & crudités", "Lapin", "Oeuf", "Viandes blanches", "Soupes"]
+    target = ["Fromages", "Poulet", "Boeuf", "Abats", "Apéritif", "Charcuteries", "Desserts", "Fruits de mer", "Gibiers", "Légumes", "Pâtes", "Poissons", "Salades & crudités", "Lapin", "Oeuf", "Viandes blanches", "Soupes"] 
+    
+    # "Poulet", "Boeuf", "Abats", "Apéritif", "Charcuteries", "Desserts", "Fruits de mer", "Gibiers", "Légumes", "Pâtes", "Poissons", "Salades & crudités", "Lapin", "Oeuf", "Viandes blanches", "Soupes"]
 
     urls = []
     
     for i in target:
-        urls.append(f"https://www.platsnetvins.com/accords-plats-mets-vins.php?plat={i}")
-       
+        urls.append(f"https://www.quelvin.com/rechacccrus.asp?Plat={i}&C=+Plat%2ENomSA+like+%27%25poulet%25%27&Lien=0&Tri=&Ordre=")
+    
+    
     start_urls = urls 
     
     def parse(self, response):
-        print(response)
+    
+        keys = response.css('tr')
+        print(keys)
+        target = response.xpath('//*[@id="wrap"]/div/div/div/div/div[1]/section[2]/div[1]/h1/b/text()').get()
+        
 
+        
         yield {
-                "target" : response.css('input#plat::attr(value)').extract(),
-                "vin" : response.css('a.Accord::text').getall(),
-                if response.css('span') == 'TV1' :
-                            "rouge" : response.css('span.TV1::text').getall(),
-                        else :
-
-
-
-                "rouge" : response.css('span.TV1::text').getall(),
-                "blanc" : response.css('span.TV2::text').getall(),
-                "rose" : response.css('span.TV3::text').getall(),
-                "blanc_moelleux" : response.css('span.TV4::text').getall(),
-                "blanc_effervescent" : response.css('span.TV5::text').getall(),
-                "rose_effervescent" : response.css('span.TV6::text').getall(),
-                "rouge_effervescent" : response.css('span.TV7::text').getall(),
-                "autre" : response.css('span.TV99::text').getall(),
+                "target" : target,
+                "vin" : response.xpath('//td[2]/a[2]/text()').getall(),
+                "type" : response.xpath('//td[3]/img/@src').getall(),
+                "region" : response.xpath('//td[4]/text()').getall()
                 }
                                  
 filename = "test.json"
