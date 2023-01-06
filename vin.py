@@ -8,24 +8,21 @@ from scrapy.crawler import CrawlerProcess
 class QuotesSpider1(scrapy.Spider):
     name = "spider1"
 
-    target = ["Fromage", "Poulet", "Boeuf"]
+    target = ["Fromages", "Poulet", "Boeuf", "Abats", "Apéritif", "Charcuteries", "Desserts", "Fruits de mer", "Gibiers", "Légumes", "Pâtes", "Poissons", "Salades & crudités", "Lapin", "Oeuf", "Viandes blanches", "Soupes"]
 
     urls = []
     
     for i in target:
         urls.append(f"https://www.platsnetvins.com/accords-plats-mets-vins.php?plat={i}")
        
-
     start_urls = urls 
     
     def parse(self, response):
         print(response)
-        keys = response.css('div.col c2_of_3_RA')
-        for key in keys:
-            yield {
-                "vin" : key.css('div.Accord::text').get(),
-                "plat": key.css('//*[@class="card cardresuA"]/div/div[3]/span/text()').get(), 
-                # "url": key.css("a.recipe-card-link::attr(href)").getall() 
+
+        yield {
+                "target" : response.css('input#plat::attr(value)').extract(),
+                "vin" : response.css('a.Accord::text').getall(), 
                 }
                                  
 filename = "vin.json"
