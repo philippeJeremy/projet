@@ -9,24 +9,19 @@ class QuotesSpider1(scrapy.Spider):
     name = "spider1"
 
     urls = []
+    target =["https://www.marmiton.org/recettes/recherche.aspx?aqt=Poulet","https://www.marmiton.org/recettes/recherche.aspx?aqt=viandes-blanche",
+            "https://www.marmiton.org/recettes/recherche.aspx?aqt=oeufs","https://www.marmiton.org/recettes/recherche.aspx?aqt=lapin", "https://www.marmiton.org/recettes/recherche.aspx?aqt=poissons", 
+            "https://www.marmiton.org/recettes/recherche.aspx?aqt=pâtes", "https://www.marmiton.org/recettes/recherche.aspx?aqt=Légumes", "https://www.marmiton.org/recettes/recherche.aspx?aqt=Gibiers", 
+            "https://www.marmiton.org/recettes/recherche.aspx?aqt=Fruit-de-mer", "https://www.marmiton.org/recettes/recherche.aspx?aqt=Dessert",  
+            "https://www.marmiton.org/recettes/recherche.aspx?aqt=Apéritif", "https://www.marmiton.org/recettes/recherche.aspx?aqt=Abats", "https://www.marmiton.org/recettes/recherche.aspx?aqt=Boeuf", 
+            "https://www.marmiton.org/recettes/recherche.aspx?aqt=Soupes", "https://www.marmiton.org/recettes/recherche.aspx?aqt=Salades"]
     
-    for i in range(1, 50):
-        urls.append(f"https://www.marmiton.org/recettes/index/categorie/aperitif-dinatoire/{i}")
-        urls.append(f"https://www.marmiton.org/recettes/index/categorie/bouchee-ou-amuse-bouche/{i}")
-        urls.append(f"https://www.marmiton.org/recettes/index/categorie/viande/{i}")
-        urls.append(f"https://www.marmiton.org/recettes/index/categorie/poisson/{i}")
-        urls.append(f"https://www.marmiton.org/recettes/index/categorie/pates-riz-semoule/{i}")
-        urls.append(f"https://www.marmiton.org/recettes/index/categorie/oeufs/{i}")
-        urls.append(f"https://www.marmiton.org/recettes/index/categorie/fruits-de-mer/{i}")
-        urls.append(f"https://www.marmiton.org/recettes/index/categorie/dessert-au-chocolat/{i}")
-        urls.append(f"https://www.marmiton.org/recettes/index/categorie/gateau/{i}")
-        urls.append(f"https://www.marmiton.org/recettes/index/categorie/creme/{i}")
-        urls.append(f"https://www.marmiton.org/recettes/index/categorie/dessert-glace/{i}")
-        urls.append(f"https://www.marmiton.org/recettes/index/categorie/tarte/{i}")
-        urls.append(f"https://www.marmiton.org/recettes/index/categorie/plat-vegetarien/{i}")
-        urls.append(f"https://www.marmiton.org/recettes/index/categorie/entree-chaude/{i}")
-        urls.append(f"https://www.marmiton.org/recettes/index/categorie/andouilette/{i}")
-        urls.append(f"https://www.marmiton.org/recettes/index/categorie/abats/{i}")
+
+    for i in target:
+        urls.append()
+
+    
+       
 
     start_urls = urls 
     
@@ -34,7 +29,7 @@ class QuotesSpider1(scrapy.Spider):
         print(response)
 
         yield {
-                "target" : response.css('h1.main-title::text').get(),
+                "target" : response.css('span.MRTN__sc-16jp16z-1.gzsDhH::text').get(),
                 "plat": response.css("h4.recipe-card__title::text").getall(), 
                 "url": response.css("a.recipe-card-link::attr(href)").getall() 
                 }
