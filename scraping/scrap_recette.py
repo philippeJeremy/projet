@@ -23,7 +23,7 @@ class QuotesSpider1(scrapy.Spider):
                 "recette" : response.xpath('/html/head/meta[18]').extract(),    
                 }
                                  
-filename = "recette.json"
+filename = "recettes.json"
 
 if filename in os.listdir():
         os.remove( filename)
