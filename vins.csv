@@ -39,86 +39,46 @@ Fromages,Alsace-grand cru Riesling,Blanc,Alsace
 Fromages,Côtes du Roussillon villages,Rosé,Languedoc/Roussillon
 Fromages,Côtes du Roussillon,Rosé,Languedoc/Roussillon
 Fromages,Mâcon supérieur,Blanc,Bourgogne
-Poulet,Vacqueyras,Rouge,Rhône
-Poulet,Côtes du Rhône,Rouge,Rhône
-Poulet,Côtes du Rhône Villages,Rouge,Rhône
-Poulet,Montagne Saint-Emilion,Rouge,Bordeaux
-Poulet,Côtes du Luberon,Rouge,Rhône
-Poulet,Cabernet-Sauvignon de Californie,Rouge,Californie
-Poulet,Pouilly Fuissé,Blanc,Bourgogne
-Poulet,Bandol,Rosé,Provence
-Poulet,Cadillac,Blanc,Bordeaux
-Poulet,Jurançon,Blanc,SudOuest
-Poulet,Loupiac ,Blanc,Bordeaux
-Poulet,Sainte-Croix-du-Mont,Blanc,Bordeaux
-Poulet,Saumur Champigny,Rouge,PaysdeLoire
-Poulet,Vacqueyras,Rouge,Rhône
-Poulet,Arbois,Rouge,Jura/Savoie
-Poulet,Côtes du Jura,Blanc,Jura
-Poulet,Vin jaune,Blanc,Jura
-Poulet,Anjou,Rouge,PaysdeLoire
-Poulet,Arbois,Blanc,Jura/Savoie
-Poulet,Barsac,Blanc,Bordeaux
-Poulet,Bonnes-mares,Rouge,Bourgogne
-Poulet,Chablis grand cru,Blanc,Bourgogne
-Poulet,Gaillac,Blanc,SudOuest
-Poulet,Haut-Médoc,Rouge,Bordeaux
-Poulet,Juliénas,Rouge,Beaujolais
-Poulet,Lalande de Pomerol,Rouge,Bordeaux
-Poulet,Mâcon,Rosé,Bourgogne
-Poulet,Mâcon supérieur,Rosé,Bourgogne
-Poulet,Médoc,Rouge,Bordeaux
-Poulet,Musigny,Rouge,Bourgogne
-Poulet,Riesling,Blanc,Alsace
-Poulet,Saint-Joseph,Rouge,Rhône
-Poulet,Saint-Romain,Rouge,Bourgogne
-Poulet,Tokay Pinot gris,Blanc,Alsace
-Poulet,Touraine,Blanc,PaysdeLoire
-Poulet,Vosne-romanée,Rouge,Bourgogne
-Poulet,Alsace-grand cru Riesling,Blanc,Alsace
-Poulet,Côtes du Roussillon villages,Rosé,Languedoc/Roussillon
-Poulet,Côtes du Roussillon,Rosé,Languedoc/Roussillon
-Poulet,Mâcon supérieur,Blanc,Bourgogne
-Boeuf,Vacqueyras,Rouge,Rhône
-Boeuf,Côtes du Rhône,Rouge,Rhône
-Boeuf,Côtes du Rhône Villages,Rouge,Rhône
-Boeuf,Montagne Saint-Emilion,Rouge,Bordeaux
-Boeuf,Côtes du Luberon,Rouge,Rhône
-Boeuf,Cabernet-Sauvignon de Californie,Rouge,Californie
-Boeuf,Pouilly Fuissé,Blanc,Bourgogne
-Boeuf,Bandol,Rosé,Provence
-Boeuf,Cadillac,Blanc,Bordeaux
-Boeuf,Jurançon,Blanc,SudOuest
-Boeuf,Loupiac ,Blanc,Bordeaux
-Boeuf,Sainte-Croix-du-Mont,Blanc,Bordeaux
-Boeuf,Saumur Champigny,Rouge,PaysdeLoire
-Boeuf,Vacqueyras,Rouge,Rhône
-Boeuf,Arbois,Rouge,Jura/Savoie
-Boeuf,Côtes du Jura,Blanc,Jura
-Boeuf,Vin jaune,Blanc,Jura
-Boeuf,Anjou,Rouge,PaysdeLoire
-Boeuf,Arbois,Blanc,Jura/Savoie
-Boeuf,Barsac,Blanc,Bordeaux
-Boeuf,Bonnes-mares,Rouge,Bourgogne
-Boeuf,Chablis grand cru,Blanc,Bourgogne
-Boeuf,Gaillac,Blanc,SudOuest
-Boeuf,Haut-Médoc,Rouge,Bordeaux
-Boeuf,Juliénas,Rouge,Beaujolais
-Boeuf,Lalande de Pomerol,Rouge,Bordeaux
-Boeuf,Mâcon,Rosé,Bourgogne
-Boeuf,Mâcon supérieur,Rosé,Bourgogne
-Boeuf,Médoc,Rouge,Bordeaux
-Boeuf,Musigny,Rouge,Bourgogne
-Boeuf,Riesling,Blanc,Alsace
-Boeuf,Saint-Joseph,Rouge,Rhône
-Boeuf,Saint-Romain,Rouge,Bourgogne
-Boeuf,Tokay Pinot gris,Blanc,Alsace
-Boeuf,Touraine,Blanc,PaysdeLoire
-Boeuf,Vosne-romanée,Rouge,Bourgogne
-Boeuf,Alsace-grand cru Riesling,Blanc,Alsace
-Boeuf,Côtes du Roussillon villages,Rosé,Languedoc/Roussillon
-Boeuf,Côtes du Roussillon,Rosé,Languedoc/Roussillon
-Boeuf,Mâcon supérieur,Blanc,Bourgogne
+Viandes rouges,Vacqueyras,Rouge,Rhône
+Viandes rouges,Côtes du Rhône,Rouge,Rhône
+Viandes rouges,Côtes du Rhône Villages,Rouge,Rhône
+Viandes rouges,Montagne Saint-Emilion,Rouge,Bordeaux
+Viandes rouges,Côtes du Luberon,Rouge,Rhône
+Viandes rouges,Cabernet-Sauvignon de Californie,Rouge,Californie
+Viandes rouges,Pouilly Fuissé,Blanc,Bourgogne
+Viandes rouges,Bandol,Rosé,Provence
+Viandes rouges,Cadillac,Blanc,Bordeaux
+Viandes rouges,Jurançon,Blanc,SudOuest
+Viandes rouges,Loupiac ,Blanc,Bordeaux
+Viandes rouges,Sainte-Croix-du-Mont,Blanc,Bordeaux
+Viandes rouges,Saumur Champigny,Rouge,PaysdeLoire
+Viandes rouges,Vacqueyras,Rouge,Rhône
+Viandes rouges,Arbois,Rouge,Jura/Savoie
+Viandes rouges,Côtes du Jura,Blanc,Jura
+Viandes rouges,Vin jaune,Blanc,Jura
+Viandes rouges,Anjou,Rouge,PaysdeLoire
+Viandes rouges,Arbois,Blanc,Jura/Savoie
+Viandes rouges,Barsac,Blanc,Bordeaux
+Viandes rouges,Bonnes-mares,Rouge,Bourgogne
+Viandes rouges,Chablis grand cru,Blanc,Bourgogne
+Viandes rouges,Gaillac,Blanc,SudOuest
+Viandes rouges,Haut-Médoc,Rouge,Bordeaux
+Viandes rouges,Juliénas,Rouge,Beaujolais
+Viandes rouges,Lalande de Pomerol,Rouge,Bordeaux
+Viandes rouges,Mâcon,Rosé,Bourgogne
+Viandes rouges,Mâcon supérieur,Rosé,Bourgogne
+Viandes rouges,Médoc,Rouge,Bordeaux
+Viandes rouges,Musigny,Rouge,Bourgogne
+Viandes rouges,Riesling,Blanc,Alsace
+Viandes rouges,Saint-Joseph,Rouge,Rhône
+Viandes rouges,Saint-Romain,Rouge,Bourgogne
+Viandes rouges,Tokay Pinot gris,Blanc,Alsace
+Viandes rouges,Touraine,Blanc,PaysdeLoire
+Viandes rouges,Vosne-romanée,Rouge,Bourgogne
+Viandes rouges,Alsace-grand cru Riesling,Blanc,Alsace
+Viandes rouges,Côtes du Roussillon villages,Rosé,Languedoc/Roussillon
+Viandes rouges,Côtes du Roussillon,Rosé,Languedoc/Roussillon
+Viandes rouges,Mâcon supérieur,Blanc,Bourgogne
 Abats,Vacqueyras,Rouge,Rhône
 Abats,Côtes du Rhône,Rouge,Rhône
 Abats,Côtes du Rhône Villages,Rouge,Rhône
@@ -479,25 +439,46 @@ Poissons,Alsace-grand cru Riesling,Blanc,Alsace
 Poissons,Côtes du Roussillon villages,Rosé,Languedoc/Roussillon
 Poissons,Côtes du Roussillon,Rosé,Languedoc/Roussillon
 Poissons,Mâcon supérieur,Blanc,Bourgogne
-Salades ,Pinot Blanc,Blanc,Alsace
-Salades ,Bourgogne Aligoté,Blanc,Bourgogne
-Salades ,Côtes de Duras,Blanc,Bordeaux
-Salades ,Côtes de Provence,Rosé,Provence
-Salades ,Côtes du Jura Chardonnay,-,Jura
-Salades ,Côtes du Marmandais,Blanc,Bordeaux
-Salades ,Côtes du Rhône méridionales,Rosé,Rhône
-Salades ,Entre-Deux-Mers,Blanc,Bordeaux
-Salades ,Muscadet,Blanc,PaysdeLoire
-Salades ,Quincy,Blanc,PaysdeLoire
-Salades ,Rosé de Provence,Rosé,Provence
-Salades ,Sancerre,Blanc,PaysdeLoire
-Salades ,Saumur,Blanc,PaysdeLoire
-Salades ,Sauvignon,-,Bourgogne
-Salades ,Sylvaner,Blanc,Alsace
-Salades ,Vin de Savoie,Blanc,Savoie
-Salades ,Quincy,Blanc,PaysdeLoire
-Salades ,Muscat de Frontignan,Blanc,Languedoc/Roussillon
-Salades ,Gewürztraminer,Blanc,Alsace
+Salades,Vacqueyras,Rouge,Rhône
+Salades,Côtes du Rhône,Rouge,Rhône
+Salades,Côtes du Rhône Villages,Rouge,Rhône
+Salades,Montagne Saint-Emilion,Rouge,Bordeaux
+Salades,Côtes du Luberon,Rouge,Rhône
+Salades,Cabernet-Sauvignon de Californie,Rouge,Californie
+Salades,Pouilly Fuissé,Blanc,Bourgogne
+Salades,Bandol,Rosé,Provence
+Salades,Cadillac,Blanc,Bordeaux
+Salades,Jurançon,Blanc,SudOuest
+Salades,Loupiac ,Blanc,Bordeaux
+Salades,Sainte-Croix-du-Mont,Blanc,Bordeaux
+Salades,Saumur Champigny,Rouge,PaysdeLoire
+Salades,Vacqueyras,Rouge,Rhône
+Salades,Arbois,Rouge,Jura/Savoie
+Salades,Côtes du Jura,Blanc,Jura
+Salades,Vin jaune,Blanc,Jura
+Salades,Anjou,Rouge,PaysdeLoire
+Salades,Arbois,Blanc,Jura/Savoie
+Salades,Barsac,Blanc,Bordeaux
+Salades,Bonnes-mares,Rouge,Bourgogne
+Salades,Chablis grand cru,Blanc,Bourgogne
+Salades,Gaillac,Blanc,SudOuest
+Salades,Haut-Médoc,Rouge,Bordeaux
+Salades,Juliénas,Rouge,Beaujolais
+Salades,Lalande de Pomerol,Rouge,Bordeaux
+Salades,Mâcon,Rosé,Bourgogne
+Salades,Mâcon supérieur,Rosé,Bourgogne
+Salades,Médoc,Rouge,Bordeaux
+Salades,Musigny,Rouge,Bourgogne
+Salades,Riesling,Blanc,Alsace
+Salades,Saint-Joseph,Rouge,Rhône
+Salades,Saint-Romain,Rouge,Bourgogne
+Salades,Tokay Pinot gris,Blanc,Alsace
+Salades,Touraine,Blanc,PaysdeLoire
+Salades,Vosne-romanée,Rouge,Bourgogne
+Salades,Alsace-grand cru Riesling,Blanc,Alsace
+Salades,Côtes du Roussillon villages,Rosé,Languedoc/Roussillon
+Salades,Côtes du Roussillon,Rosé,Languedoc/Roussillon
+Salades,Mâcon supérieur,Blanc,Bourgogne
 Lapin,Vacqueyras,Rouge,Rhône
 Lapin,Côtes du Rhône,Rouge,Rhône
 Lapin,Côtes du Rhône Villages,Rouge,Rhône
@@ -658,3 +639,43 @@ Soupes,Alsace-grand cru Riesling,Blanc,Alsace
 Soupes,Côtes du Roussillon villages,Rosé,Languedoc/Roussillon
 Soupes,Côtes du Roussillon,Rosé,Languedoc/Roussillon
 Soupes,Mâcon supérieur,Blanc,Bourgogne
+entrée,Vacqueyras,Rouge,Rhône
+entrée,Côtes du Rhône,Rouge,Rhône
+entrée,Côtes du Rhône Villages,Rouge,Rhône
+entrée,Montagne Saint-Emilion,Rouge,Bordeaux
+entrée,Côtes du Luberon,Rouge,Rhône
+entrée,Cabernet-Sauvignon de Californie,Rouge,Californie
+entrée,Pouilly Fuissé,Blanc,Bourgogne
+entrée,Bandol,Rosé,Provence
+entrée,Cadillac,Blanc,Bordeaux
+entrée,Jurançon,Blanc,SudOuest
+entrée,Loupiac ,Blanc,Bordeaux
+entrée,Sainte-Croix-du-Mont,Blanc,Bordeaux
+entrée,Saumur Champigny,Rouge,PaysdeLoire
+entrée,Vacqueyras,Rouge,Rhône
+entrée,Arbois,Rouge,Jura/Savoie
+entrée,Côtes du Jura,Blanc,Jura
+entrée,Vin jaune,Blanc,Jura
+entrée,Anjou,Rouge,PaysdeLoire
+entrée,Arbois,Blanc,Jura/Savoie
+entrée,Barsac,Blanc,Bordeaux
+entrée,Bonnes-mares,Rouge,Bourgogne
+entrée,Chablis grand cru,Blanc,Bourgogne
+entrée,Gaillac,Blanc,SudOuest
+entrée,Haut-Médoc,Rouge,Bordeaux
+entrée,Juliénas,Rouge,Beaujolais
+entrée,Lalande de Pomerol,Rouge,Bordeaux
+entrée,Mâcon,Rosé,Bourgogne
+entrée,Mâcon supérieur,Rosé,Bourgogne
+entrée,Médoc,Rouge,Bordeaux
+entrée,Musigny,Rouge,Bourgogne
+entrée,Riesling,Blanc,Alsace
+entrée,Saint-Joseph,Rouge,Rhône
+entrée,Saint-Romain,Rouge,Bourgogne
+entrée,Tokay Pinot gris,Blanc,Alsace
+entrée,Touraine,Blanc,PaysdeLoire
+entrée,Vosne-romanée,Rouge,Bourgogne
+entrée,Alsace-grand cru Riesling,Blanc,Alsace
+entrée,Côtes du Roussillon villages,Rosé,Languedoc/Roussillon
+entrée,Côtes du Roussillon,Rosé,Languedoc/Roussillon
+entrée,Mâcon supérieur,Blanc,Bourgogne
