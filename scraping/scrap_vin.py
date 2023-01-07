@@ -9,7 +9,7 @@ import random
 class QuotesSpider1(scrapy.Spider):
     name = "spider1"
 
-    target = ["Fromages", "Poulet", "Boeuf", "Abats", "Apéritif", "Charcuteries", "Desserts", "Fruits de mer", "Gibiers", "Légumes", "Pâtes", "Poissons", "Salades & crudités", "Lapin", "Oeuf", "Viandes blanches", "Soupes"] 
+    target = ["Fromages", "Viandes rouges", "Abats", "Apéritif", "Charcuteries", "Desserts", "Fruits de mer", "Gibiers", "Légumes", "Pâtes", "Poissons", "Salades", "Lapin", "Oeuf", "Viandes blanches", "Soupes", "entrée"] 
     
     urls = []
     
@@ -31,7 +31,7 @@ class QuotesSpider1(scrapy.Spider):
                 "region" : response.xpath('//td[4]/text()').getall()
                 }
                                  
-filename = "test.json"
+filename = "vins.json"
 
 if filename in os.listdir():
         os.remove( filename)
