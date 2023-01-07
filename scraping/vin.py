@@ -11,13 +11,10 @@ class QuotesSpider1(scrapy.Spider):
 
     target = ["Fromages", "Poulet", "Boeuf", "Abats", "Apéritif", "Charcuteries", "Desserts", "Fruits de mer", "Gibiers", "Légumes", "Pâtes", "Poissons", "Salades & crudités", "Lapin", "Oeuf", "Viandes blanches", "Soupes"] 
     
-    # "Poulet", "Boeuf", "Abats", "Apéritif", "Charcuteries", "Desserts", "Fruits de mer", "Gibiers", "Légumes", "Pâtes", "Poissons", "Salades & crudités", "Lapin", "Oeuf", "Viandes blanches", "Soupes"]
-
     urls = []
     
     for i in target:
         urls.append(f"https://www.quelvin.com/rechacccrus.asp?Plat={i}&C=+Plat%2ENomSA+like+%27%25poulet%25%27&Lien=0&Tri=&Ordre=")
-    
     
     start_urls = urls 
     
@@ -26,8 +23,6 @@ class QuotesSpider1(scrapy.Spider):
         keys = response.css('tr')
         print(keys)
         target = response.xpath('//*[@id="wrap"]/div/div/div/div/div[1]/section[2]/div[1]/h1/b/text()').get()
-        
-
         
         yield {
                 "target" : target,
