@@ -9,7 +9,7 @@ import random
 class QuotesSpider1(scrapy.Spider):
     name = "spider1"
 
-    target = ["Fromages", "Viandes rouges", "Abats", "Apéritif", "Charcuteries", "Desserts", "Fruits de mer", "Gibiers", "Légumes", "Pâtes", "Poissons", "Salades", "Lapin", "Oeuf", "Viandes blanches", "Soupes", "entrée"] 
+    target = ["Fromages", "Viandes rouges", "Abats", "Apéritif", "Charcuteries", "Desserts", "Fruits de mer", "Gibiers", "Légumes", "Pâtes", "Poissons", "Salades", "Lapin", "Oeuf", "Viandes blanches", "Soupes", "Entrée"] 
     
     urls = []
     
