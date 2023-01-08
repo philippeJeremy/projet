@@ -439,46 +439,6 @@ Poissons,Alsace-grand cru Riesling,Blanc,Alsace
 Poissons,Côtes du Roussillon villages,Rosé,Languedoc/Roussillon
 Poissons,Côtes du Roussillon,Rosé,Languedoc/Roussillon
 Poissons,Mâcon supérieur,Blanc,Bourgogne
-Salades,Vacqueyras,Rouge,Rhône
-Salades,Côtes du Rhône,Rouge,Rhône
-Salades,Côtes du Rhône Villages,Rouge,Rhône
-Salades,Montagne Saint-Emilion,Rouge,Bordeaux
-Salades,Côtes du Luberon,Rouge,Rhône
-Salades,Cabernet-Sauvignon de Californie,Rouge,Californie
-Salades,Pouilly Fuissé,Blanc,Bourgogne
-Salades,Bandol,Rosé,Provence
-Salades,Cadillac,Blanc,Bordeaux
-Salades,Jurançon,Blanc,SudOuest
-Salades,Loupiac ,Blanc,Bordeaux
-Salades,Sainte-Croix-du-Mont,Blanc,Bordeaux
-Salades,Saumur Champigny,Rouge,PaysdeLoire
-Salades,Vacqueyras,Rouge,Rhône
-Salades,Arbois,Rouge,Jura/Savoie
-Salades,Côtes du Jura,Blanc,Jura
-Salades,Vin jaune,Blanc,Jura
-Salades,Anjou,Rouge,PaysdeLoire
-Salades,Arbois,Blanc,Jura/Savoie
-Salades,Barsac,Blanc,Bordeaux
-Salades,Bonnes-mares,Rouge,Bourgogne
-Salades,Chablis grand cru,Blanc,Bourgogne
-Salades,Gaillac,Blanc,SudOuest
-Salades,Haut-Médoc,Rouge,Bordeaux
-Salades,Juliénas,Rouge,Beaujolais
-Salades,Lalande de Pomerol,Rouge,Bordeaux
-Salades,Mâcon,Rosé,Bourgogne
-Salades,Mâcon supérieur,Rosé,Bourgogne
-Salades,Médoc,Rouge,Bordeaux
-Salades,Musigny,Rouge,Bourgogne
-Salades,Riesling,Blanc,Alsace
-Salades,Saint-Joseph,Rouge,Rhône
-Salades,Saint-Romain,Rouge,Bourgogne
-Salades,Tokay Pinot gris,Blanc,Alsace
-Salades,Touraine,Blanc,PaysdeLoire
-Salades,Vosne-romanée,Rouge,Bourgogne
-Salades,Alsace-grand cru Riesling,Blanc,Alsace
-Salades,Côtes du Roussillon villages,Rosé,Languedoc/Roussillon
-Salades,Côtes du Roussillon,Rosé,Languedoc/Roussillon
-Salades,Mâcon supérieur,Blanc,Bourgogne
 Lapin,Vacqueyras,Rouge,Rhône
 Lapin,Côtes du Rhône,Rouge,Rhône
 Lapin,Côtes du Rhône Villages,Rouge,Rhône
@@ -599,83 +559,43 @@ Viandes blanches,Alsace-grand cru Riesling,Blanc,Alsace
 Viandes blanches,Côtes du Roussillon villages,Rosé,Languedoc/Roussillon
 Viandes blanches,Côtes du Roussillon,Rosé,Languedoc/Roussillon
 Viandes blanches,Mâcon supérieur,Blanc,Bourgogne
-Soupes,Vacqueyras,Rouge,Rhône
-Soupes,Côtes du Rhône,Rouge,Rhône
-Soupes,Côtes du Rhône Villages,Rouge,Rhône
-Soupes,Montagne Saint-Emilion,Rouge,Bordeaux
-Soupes,Côtes du Luberon,Rouge,Rhône
-Soupes,Cabernet-Sauvignon de Californie,Rouge,Californie
-Soupes,Pouilly Fuissé,Blanc,Bourgogne
-Soupes,Bandol,Rosé,Provence
-Soupes,Cadillac,Blanc,Bordeaux
-Soupes,Jurançon,Blanc,SudOuest
-Soupes,Loupiac ,Blanc,Bordeaux
-Soupes,Sainte-Croix-du-Mont,Blanc,Bordeaux
-Soupes,Saumur Champigny,Rouge,PaysdeLoire
-Soupes,Vacqueyras,Rouge,Rhône
-Soupes,Arbois,Rouge,Jura/Savoie
-Soupes,Côtes du Jura,Blanc,Jura
-Soupes,Vin jaune,Blanc,Jura
-Soupes,Anjou,Rouge,PaysdeLoire
-Soupes,Arbois,Blanc,Jura/Savoie
-Soupes,Barsac,Blanc,Bordeaux
-Soupes,Bonnes-mares,Rouge,Bourgogne
-Soupes,Chablis grand cru,Blanc,Bourgogne
-Soupes,Gaillac,Blanc,SudOuest
-Soupes,Haut-Médoc,Rouge,Bordeaux
-Soupes,Juliénas,Rouge,Beaujolais
-Soupes,Lalande de Pomerol,Rouge,Bordeaux
-Soupes,Mâcon,Rosé,Bourgogne
-Soupes,Mâcon supérieur,Rosé,Bourgogne
-Soupes,Médoc,Rouge,Bordeaux
-Soupes,Musigny,Rouge,Bourgogne
-Soupes,Riesling,Blanc,Alsace
-Soupes,Saint-Joseph,Rouge,Rhône
-Soupes,Saint-Romain,Rouge,Bourgogne
-Soupes,Tokay Pinot gris,Blanc,Alsace
-Soupes,Touraine,Blanc,PaysdeLoire
-Soupes,Vosne-romanée,Rouge,Bourgogne
-Soupes,Alsace-grand cru Riesling,Blanc,Alsace
-Soupes,Côtes du Roussillon villages,Rosé,Languedoc/Roussillon
-Soupes,Côtes du Roussillon,Rosé,Languedoc/Roussillon
-Soupes,Mâcon supérieur,Blanc,Bourgogne
-entrée,Vacqueyras,Rouge,Rhône
-entrée,Côtes du Rhône,Rouge,Rhône
-entrée,Côtes du Rhône Villages,Rouge,Rhône
-entrée,Montagne Saint-Emilion,Rouge,Bordeaux
-entrée,Côtes du Luberon,Rouge,Rhône
-entrée,Cabernet-Sauvignon de Californie,Rouge,Californie
-entrée,Pouilly Fuissé,Blanc,Bourgogne
-entrée,Bandol,Rosé,Provence
-entrée,Cadillac,Blanc,Bordeaux
-entrée,Jurançon,Blanc,SudOuest
-entrée,Loupiac ,Blanc,Bordeaux
-entrée,Sainte-Croix-du-Mont,Blanc,Bordeaux
-entrée,Saumur Champigny,Rouge,PaysdeLoire
-entrée,Vacqueyras,Rouge,Rhône
-entrée,Arbois,Rouge,Jura/Savoie
-entrée,Côtes du Jura,Blanc,Jura
-entrée,Vin jaune,Blanc,Jura
-entrée,Anjou,Rouge,PaysdeLoire
-entrée,Arbois,Blanc,Jura/Savoie
-entrée,Barsac,Blanc,Bordeaux
-entrée,Bonnes-mares,Rouge,Bourgogne
-entrée,Chablis grand cru,Blanc,Bourgogne
-entrée,Gaillac,Blanc,SudOuest
-entrée,Haut-Médoc,Rouge,Bordeaux
-entrée,Juliénas,Rouge,Beaujolais
-entrée,Lalande de Pomerol,Rouge,Bordeaux
-entrée,Mâcon,Rosé,Bourgogne
-entrée,Mâcon supérieur,Rosé,Bourgogne
-entrée,Médoc,Rouge,Bordeaux
-entrée,Musigny,Rouge,Bourgogne
-entrée,Riesling,Blanc,Alsace
-entrée,Saint-Joseph,Rouge,Rhône
-entrée,Saint-Romain,Rouge,Bourgogne
-entrée,Tokay Pinot gris,Blanc,Alsace
-entrée,Touraine,Blanc,PaysdeLoire
-entrée,Vosne-romanée,Rouge,Bourgogne
-entrée,Alsace-grand cru Riesling,Blanc,Alsace
-entrée,Côtes du Roussillon villages,Rosé,Languedoc/Roussillon
-entrée,Côtes du Roussillon,Rosé,Languedoc/Roussillon
-entrée,Mâcon supérieur,Blanc,Bourgogne
+Entrée,Vacqueyras,Rouge,Rhône
+Entrée,Côtes du Rhône,Rouge,Rhône
+Entrée,Côtes du Rhône Villages,Rouge,Rhône
+Entrée,Montagne Saint-Emilion,Rouge,Bordeaux
+Entrée,Côtes du Luberon,Rouge,Rhône
+Entrée,Cabernet-Sauvignon de Californie,Rouge,Californie
+Entrée,Pouilly Fuissé,Blanc,Bourgogne
+Entrée,Bandol,Rosé,Provence
+Entrée,Cadillac,Blanc,Bordeaux
+Entrée,Jurançon,Blanc,SudOuest
+Entrée,Loupiac ,Blanc,Bordeaux
+Entrée,Sainte-Croix-du-Mont,Blanc,Bordeaux
+Entrée,Saumur Champigny,Rouge,PaysdeLoire
+Entrée,Vacqueyras,Rouge,Rhône
+Entrée,Arbois,Rouge,Jura/Savoie
+Entrée,Côtes du Jura,Blanc,Jura
+Entrée,Vin jaune,Blanc,Jura
+Entrée,Anjou,Rouge,PaysdeLoire
+Entrée,Arbois,Blanc,Jura/Savoie
+Entrée,Barsac,Blanc,Bordeaux
+Entrée,Bonnes-mares,Rouge,Bourgogne
+Entrée,Chablis grand cru,Blanc,Bourgogne
+Entrée,Gaillac,Blanc,SudOuest
+Entrée,Haut-Médoc,Rouge,Bordeaux
+Entrée,Juliénas,Rouge,Beaujolais
+Entrée,Lalande de Pomerol,Rouge,Bordeaux
+Entrée,Mâcon,Rosé,Bourgogne
+Entrée,Mâcon supérieur,Rosé,Bourgogne
+Entrée,Médoc,Rouge,Bordeaux
+Entrée,Musigny,Rouge,Bourgogne
+Entrée,Riesling,Blanc,Alsace
+Entrée,Saint-Joseph,Rouge,Rhône
+Entrée,Saint-Romain,Rouge,Bourgogne
+Entrée,Tokay Pinot gris,Blanc,Alsace
+Entrée,Touraine,Blanc,PaysdeLoire
+Entrée,Vosne-romanée,Rouge,Bourgogne
+Entrée,Alsace-grand cru Riesling,Blanc,Alsace
+Entrée,Côtes du Roussillon villages,Rosé,Languedoc/Roussillon
+Entrée,Côtes du Roussillon,Rosé,Languedoc/Roussillon
+Entrée,Mâcon supérieur,Blanc,Bourgogne
