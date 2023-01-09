@@ -27,3 +27,12 @@ CMD mlflow server -p $PORT \
     --host 0.0.0.0 \
     --backend-store-uri $BACKEND_STORE_URI \
     --default-artifact-root $ARTIFACT_ROOT
+
+
+
+# Deployement sur Heroku
+# heroku login
+# heroku container:login
+# heroku create model-vin
+# heroku container:push web -a model-vin
+# heroku container:release web -a model-vin
