@@ -1,15 +1,17 @@
 import os
 import scrapy
-import logging
-from scrapy.utils.request import request_fingerprint
-from scrapy.crawler import CrawlerProcess
 import random
+import logging
+
+from scrapy.crawler import CrawlerProcess
 
 # Récupération des hôtels
 class QuotesSpider1(scrapy.Spider):
     name = "spider1"
 
-    target = ["Fromages", "Viandes rouges", "Abats", "Apéritif", "Charcuteries", "Desserts", "Fruits de mer", "Gibiers", "Légumes", "Pâtes", "Poissons", "Salades", "Lapin", "Oeuf", "Viandes blanches", "Soupes", "Entrée"] 
+    target = ["Fromages", "Viandes rouges", "Abats", "Apéritif", "Charcuteries", "Desserts", 
+                "Fruits de mer", "Gibiers", "Légumes", "Pâtes", "Poissons", "Salades", "Lapin", 
+                "Oeuf", "Viandes blanches", "Soupes", "Entrée"] 
     
     urls = []
     
