@@ -10,16 +10,26 @@ class QuotesSpider1(scrapy.Spider):
 
     liste_urls = []
     
-    for i in range(1,50):
+    for i in range(1,100):
         liste_urls.append(f"https://www.marmiton.org/recettes/index/categorie/creme/{i}"),
         liste_urls.append(f"https://www.marmiton.org/recettes/index/categorie/dessert-glace/{i}"),	
         liste_urls.append(f"https://www.marmiton.org/recettes/index/categorie/dessert-glace/{i}"),
         liste_urls.append(f"https://www.marmiton.org/recettes/index/categorie/tarte/{i}"),	        
         liste_urls.append(f"https://www.marmiton.org/recettes/index/categorie/tarte/{i}"),
         liste_urls.append(f"https://www.marmiton.org/recettes/index/categorie/plat-vegetarien/{i}"),
-        liste_urls.append(f"https://www.marmiton.org/recettes/index/categorie/entree-chaude/{i}"),
         liste_urls.append(f"https://www.marmiton.org/recettes/index/categorie/andouilette/{i}"),
-        liste_urls.append(f"https://www.marmiton.org/recettes/index/categorie/abats/{i}")
+        liste_urls.append(f"https://www.marmiton.org/recettes/index/categorie/abats/{i}"),
+        liste_urls.append(f"https://www.marmiton.org/recettes/index/categorie/pates-riz-semoule/{i}"),
+        liste_urls.append(f"https://www.marmiton.org/recettes/index/categorie/soupe/{i}"),
+        liste_urls.append(f"https://www.marmiton.org/recettes/index/categorie/viande/{i}"),
+        liste_urls.append(f"https://www.marmiton.org/recettes/index/categorie/oeufs/{i}"),
+        liste_urls.append(f"https://www.marmiton.org/recettes/index/categorie/poisson/{i}"),
+        liste_urls.append(f"https://www.marmiton.org/recettes/index/categorie/plat-vegetarien/{i}"),
+        liste_urls.append(f"https://www.marmiton.org/recettes/index/categorie/autres-crudites/{i}"),
+        liste_urls.append(f"https://www.marmiton.org/recettes/index/categorie/fruits-de-mer/{i}"),
+        liste_urls.append(f"https://www.marmiton.org/recettes/index/categorie/terrine-pate/{i}"),
+        liste_urls.append(f"https://www.marmiton.org/recettes/index/categorie/aperitif-dinatoire/{i}"),
+        liste_urls.append(f"https://www.marmiton.org/recettes/index/categorie/bouchee-ou-amuse-bouche/{i}")
 
     start_urls = liste_urls 
     
@@ -27,7 +37,7 @@ class QuotesSpider1(scrapy.Spider):
         print(response)
 
         yield {
-                "target" : response.css('span.MRTN__sc-16jp16z-1.gzsDhH::text').get(),
+                "target" : response.css('h1.main-title::text').get(),
                 "plat": response.css("h4.recipe-card__title::text").getall(), 
                 "url": response.css("a.recipe-card-link::attr(href)").getall() 
                 }
