@@ -13,6 +13,8 @@ RUN unzip awscliv2.zip
 RUN ./aws/install
 
 
+RUN conda install -c conda-forge spacy
+RUN python -m spacy download fr_core_news_lg
 COPY requirements.txt /dependencies/requirements.txt
 RUN pip install -r /dependencies/requirements.txt
 
