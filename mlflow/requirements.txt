@@ -11,4 +11,6 @@ psycopg2-binary
 jupyter
 openpyxl
 tensorflow
+tensorflow-hub
+scikit-learn
 

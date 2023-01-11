@@ -1,20 +1,17 @@
-FROM continuumio/miniconda3
+FROM python:3.10
 
 WORKDIR /home/app
 
-RUN apt-get update
-RUN apt-get install nano unzip
-RUN apt install curl -y
+# RUN apt-get update
+# RUN apt-get install nano unzip
+# RUN apt install curl -y
 
-RUN curl -fsSL https://get.deta.dev/cli.sh | sh
+# RUN curl -fsSL https://get.deta.dev/cli.sh | sh
 
-RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-RUN unzip awscliv2.zip
-RUN ./aws/install
+# RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+# RUN unzip awscliv2.zip
+# RUN ./aws/install
 
-
-RUN conda install -c conda-forge spacy
-RUN python -m spacy download fr_core_news_lg
 COPY requirements.txt /dependencies/requirements.txt
 RUN pip install -r /dependencies/requirements.txt
 
