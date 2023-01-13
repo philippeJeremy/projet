@@ -1,10 +1,12 @@
+import os
+import base64
+import requests
 import streamlit as st
 import streamlit.components.v1 as components
-import base64
 
 st.set_page_config(
     page_title="Food-pairing",
-    page_icon="",
+    page_icon="🍷",
 )
 
 @st.experimental_memo
@@ -12,7 +14,11 @@ def get_img_as_base64(file):
     with open(file, "rb") as f:
         data = f.read()
     return base64.b64encode(data).decode()
- 
+
+os.environ['NO_PROXY'] = '127.0.0.1'
+def requette(donnees):
+    response = requests.post("http://127.0.0.1:4000/predict", json=donnees)
+    return response
 
 img = get_img_as_base64("vin-page-1.jpeg")
 logo = get_img_as_base64("logo.png")
@@ -62,10 +68,13 @@ with buff2:
     if "my_input" not in st.session_state:
         st.session_state["my_input"] = "Mon plat"
 
-    my_input = st.text_input("", st.session_state["my_input"])
+    my_input = st.text_input("")
     submit = st.button("Valider")
+    json = { 'plat': my_input}
     if submit:
-        st.session_state["my_input"] = my_input
+        category = requette(json)
+       
+        st.session_state["my_input"] = category
   
 
 

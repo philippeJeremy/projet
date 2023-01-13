@@ -1,12 +1,34 @@
+import base64
+import requests
+
+import pandas as pd
 import streamlit as st
 import streamlit.components.v1 as components
-import base64
+
+DATA = "https://data-vins.s3.amazonaws.com/vins.csv"
 
 @st.experimental_memo
 def get_img_as_base64(file):
     with open(file, "rb") as f:
         data = f.read()
     return base64.b64encode(data).decode()
+
+@st.cache
+def load_data():
+    df = pd.read_csv(DATA)
+    return df
+
+data_load_state = st.text('Loading data...')
+df = load_data()
+data_load_state.text("")
+
+st.write("You have entered", st.session_state["my_input"])
+
+
+def get_data(category):
+    newdf = df.loc[df['target'] == category]
+    return newdf[['vin', 'type', 'region']]
+
 
 def App1page():
     st.write("hello world")
@@ -31,6 +53,11 @@ background-position: left;
 background-repeat: no-repeat;
 background-attachment: local;
 }}
+[data-testid=stDataFrameResizable]{{
+    margin-top: 20%;
+    margin-left: 88%;
+    
+}}
 
 </style>
 """
@@ -40,13 +67,13 @@ st.write(
 
     f'''
 <div style='margin-left: 40%; margin-top: 10%;'> 
-            <div style='color: #db545a; font-size: 25px; font-weight: 700;letter-spacing: 1px; text-align: right; '>NOTRE SÉLECTION POUR VOUS</div>
+<div style='color: #db545a; font-size: 25px; font-weight: 700;letter-spacing: 1px; text-align: right; '>NOTRE SÉLECTION POUR VOUS</div>
             
 </div>
 
             ''', unsafe_allow_html=True,
 )
 
-   
+result = get_data(st.session_state["my_input"])
 
-# st.write("You have entered", st.session_state["my_input"])
+st.dataframe(result)

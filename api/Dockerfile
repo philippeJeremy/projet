@@ -14,4 +14,4 @@ RUN pip install -r /dependencies/requirements.txt
 
 COPY . /home/app
 
-CMD gunicorn app:app --bind 0.0.0.0:$PORT --worker-class uvicorn.workers.UvicornWorker 
+CMD gunicorn app:app --bind 127.0.0.1:$PORT --worker-class uvicorn.workers.UvicornWorker --timeout 100000000
