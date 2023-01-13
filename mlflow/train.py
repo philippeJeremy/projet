@@ -1,12 +1,11 @@
 import os
 import time
 import mlflow
-import fr_core_news_lg
 
 import numpy as np
 import pandas as pd
 import tensorflow as tf
-# import tensorflow_hub as hub
+import tensorflow_hub as hub
 
 
 from spacy.lang.fr.stop_words import STOP_WORDS
@@ -17,8 +16,7 @@ from sklearn.pipeline import Pipeline
 from sklearn.compose import ColumnTransformer
 from sklearn.linear_model import LinearRegression
 from sklearn.preprocessing import StandardScaler, OneHotEncoder, LabelEncoder
-
-nlp = fr_core_news_lg.load()
+from tensorflow.keras.layers import Dropout
 
 if __name__ == "__main__":
 
@@ -31,82 +29,58 @@ if __name__ == "__main__":
     mlflow.set_experiment(EXPERIMENT_NAME)
     experiment = mlflow.get_experiment_by_name(EXPERIMENT_NAME)
 
-    df = pd.read_csv("./data_plus.csv")
+    df = pd.read_csv("./data_final.csv")
 
-    df["plat_clean"] = df["plat"].apply(lambda x: ''.join(
-        ch for ch in x if ch.isalnum() or ch == " "))
-    df["plat_clean"] = df["plat_clean"].apply(
-        lambda x: x.replace(" +", " ").lower().strip())
-    df["plat_clean"] = df["plat_clean"].apply(lambda x: " ".join(
-        token.text for token in nlp(x) if token.text not in STOP_WORDS))
-    label = LabelEncoder()
-    df['target_encoded'] = label.fit_transform(df["target"])
+    le = LabelEncoder()
+    
+    df['target'] = le.fit_transform(df["target"])
+    le_namemapping = dict(zip(le.classes_, le.transform(le.classes_)))
 
-    mask = df["plat_clean"].isna() == False
-    df = df[mask]
+    X_train, X_test, y_train, y_test = train_test_split(df["plat"],df["target"], test_size=0.3)
 
-    tokenizer = tf.keras.preprocessing.text.Tokenizer(
-        num_words=1000)  # instanciate the tokenizer
-    tokenizer.fit_on_texts(df["plat_clean"])
-    df["plat_encoded"] = tokenizer.texts_to_sequences(df.plat_clean)
-    df["len_plat"] = df["plat_encoded"].apply(lambda x: len(x))
-    df = df[df["len_plat"] != 0]
+    train_data = tf.data.Dataset.from_tensor_slices((X_train, y_train))
+    val_data = tf.data.Dataset.from_tensor_slices((X_test, y_test))
+   
+    with mlflow.start_run(experiment_id = experiment.experiment_id):
+        embedding = "https://tfhub.dev/google/nnlm-en-dim50/2"
+        hub_layer = hub.KerasLayer(embedding, input_shape=[], 
+                           dtype=tf.string, trainable=True)
+        
+        model = tf.keras.Sequential()
+        model.add(hub_layer)
+        model.add(Dropout(0.2))
+        model.add(tf.keras.layers.Dense(32, activation='relu'))
+        model.add(Dropout(0.2))
+        model.add(tf.keras.layers.Dense(13, activation="softmax"))
+        model.compile(optimizer='adam',
+                    loss=tf.keras.losses.SparseCategoricalCrossentropy(),
+                    metrics=['accuracy'])
 
-    plat_pad = tf.keras.preprocessing.sequence.pad_sequences(
-        df.plat_encoded, padding="post")
+        weights = 1/(df["target"]).value_counts()
+        weights = weights * len(df)/13
+        weights = {index : values for index , values in zip(weights.index,weights.values)}
 
-    full_ds = tf.data.Dataset.from_tensor_slices(
-        (plat_pad, df['target_encoded'].values))
+        Checkpoint_create = tf.keras.callbacks.ModelCheckpoint( 
+        filepath = '/tmp/weights.hdf5', 
+        monitor = 'val_loss', 
+        verbose = 1, 
+        save_best_only = True, 
+        save_weights_only = False, 
+        mode = 'auto',
+        save_freq = 'epoch',
+        period = 1)
 
-    TAKE_SIZE = int(0.7*df.shape[0])
-
-    train_data = full_ds.take(TAKE_SIZE).shuffle(TAKE_SIZE)
-    train_data = train_data.batch(64)
-
-    test_data = full_ds.skip(TAKE_SIZE)
-    test_data = test_data.batch(64)
-
-    for plat, target in train_data.take(1):
-        plat, target
-
-    vocab_size = len(tokenizer.word_index)
-    model = tf.keras.Sequential([
-        tf.keras.layers.Embedding(
-            vocab_size+1, 256, input_shape=[plat.shape[1],], name="embedding"),
-        tf.keras.layers.LSTM(units=256, return_sequences=True),
-        tf.keras.layers.Dropout(0.3),
-        tf.keras.layers.LSTM(units=128, return_sequences=False),
-        tf.keras.layers.Dropout(0.3),
-        tf.keras.layers.Dense(64, activation='selu'),
-        tf.keras.layers.Dropout(0.2),
-        tf.keras.layers.Dense(32, activation='selu'),
-        tf.keras.layers.Dropout(0.2),
-        tf.keras.layers.Dense(32, activation='selu'),
-
-        tf.keras.layers.Dense(17, activation="softmax", name="last")
-    ])
-
-    optimizer = tf.keras.optimizers.Adam(learning_rate=0.001)
-
-    model.compile(optimizer='adam',
-                  loss=tf.keras.losses.SparseCategoricalCrossentropy(
-                      from_logits=True),
-                  metrics=[tf.keras.metrics.SparseCategoricalAccuracy()])
-
-    weights = 1/(df["target_encoded"]).value_counts()
-    weights = weights * len(df)/17
-    weights = {index: values for index,
-               values in zip(weights.index, weights.values)}
-
-    with mlflow.start_run(experiment_id=experiment.experiment_id):
-
-        model.fit(train_data,
-                  epochs=10,
-                  validation_data=test_data,
+        model.fit(train_data.shuffle(10000).batch(512),
+                  epochs=30,
+                  validation_data=val_data.batch(512),
+                  verbose=1,
                   class_weight=weights,
-                  verbose=1)
+                  callbacks = Checkpoint_create)
+        
+        mlflow.tensorflow.log_model(model, './models.joblib')
+#        mlflow.log_artifact(local_path="./path.h5", artifact_path="vin")
 
 # joblib.dump(model, "model.joblib")
 
-    print("...Done!")
-    print(f"---Total training time: {time.time()-start_time}")
+print("...Done!")
+print(f"---Total training time: {time.time()-start_time}")
