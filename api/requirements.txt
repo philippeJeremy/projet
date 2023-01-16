@@ -7,7 +7,7 @@ gunicorn
 openpyxl 
 mlflow 
 boto3 
-sklearn
+scikit-learn
 python-multipart
 fsspec
 s3fs

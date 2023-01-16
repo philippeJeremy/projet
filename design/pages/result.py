@@ -7,22 +7,27 @@ import streamlit.components.v1 as components
 
 DATA = "https://data-vins.s3.amazonaws.com/vins.csv"
 
+
 @st.experimental_memo
 def get_img_as_base64(file):
     with open(file, "rb") as f:
         data = f.read()
     return base64.b64encode(data).decode()
 
+
 @st.cache
 def load_data():
     df = pd.read_csv(DATA)
     return df
 
+
 data_load_state = st.text('Loading data...')
 df = load_data()
 data_load_state.text("")
 
-st.write("You have entered", st.session_state["my_input"])
+st.markdown(
+    f"""<h2 style="text-align: center; color: black;">Votre plat est {st.session_state["choix"] } , 
+    nous l'avons classifié dans {st.session_state["my_input"]}</h2>""", unsafe_allow_html=True)
 
 
 def get_data(category):
@@ -32,7 +37,7 @@ def get_data(category):
 
 def App1page():
     st.write("hello world")
- 
+
 
 img = get_img_as_base64("vin-page-2.jpeg")
 logo = get_img_as_base64("logo.png")
